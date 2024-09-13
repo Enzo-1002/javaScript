@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item 9</title>
+</head>
+<body>
+    <script>
+
+        function posicaoPrimo(posicao){
+            let primo, n=0, teste
+
+            for(i=2; i>0; i++){
+                teste=true
+                for(j=2; j<i; j++){
+                    if(i%j==0) teste=false
+                }
+                if(teste==true){
+                    primo=i
+                    n++
+                }
+                if(n==posicao)
+                break
+            }
+
+            return primo
+        }
+
+        var posicao=prompt('Qual a posição do numero primo que vc deseja descobrir?')
+        // for(let i=2; i<50; i+=2){
+        //     alert(posicaoPrimo(i))
+        // }
+        alert(posicaoPrimo(posicao))
+       
+    </script>
+    <h4><a href="index.html">Voltar</a></h4>
+</body>
+</html>
