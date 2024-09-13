@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Backs</title>
+</head>
+<body>
+    <script>
+        function mult(values, func){
+            for (i=0; i<values.lenght; i++) {
+                values[i]=func(values[i])
+            }
+            // for (const element of values) {
+            //     element=func(element)
+            // }
+
+            return values
+        }
+
+        var valores=[1, 2, 3, 4, 10, 20]
+        const func=(n) => n*2
+        console.log(mult(valores, func))
+    </script>
+</body>
+</html>

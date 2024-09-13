@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando String....</title>
+</head>
+<body>
+    <script>
+        const nome= 'Enzo'
+        function quantCarac(palavra){
+            let digitos=String(palavra).length
+            return `${palavra} tem ${digitos} dígitos.`
+        }
+        console.log(quantCarac(nome))
+        console.log(quantCarac(quantCarac()))
+    </script>
+</body>
+</html>
