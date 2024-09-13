@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item 6</title>
+</head>
+<body>
+    <input id="Altura" type="number" placeholder="Altura em metros" required>
+    <input id="Peso" type="number" placeholder="Peso em kilos" required>
+    <br><br>
+    <button onclick='imc(document.getElementById("Altura").value, document.getElementById("Peso").value)'>Pronto</button>
+    <br><br>
+    
+
+    <script>
+        function imc(altura, peso){
+            return alert(peso/(altura*altura))
+        }
+    </script>
+    <br><br>
+    <h4><a href="index.html">Voltar</a></h4>
+</body>
+</html>

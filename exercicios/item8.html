@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item 8</title>
+</head>
+<body>
+    <script>
+        var fibonacciPares=0
+        var anterior=1, num=1, aux
+
+        // do {
+        //     aux = num;
+        //     num = num + anterior;
+        //     anterior = aux;
+        // } while (num<50000);
+
+
+        for(i=1; i<=50000; i+=anterior, anterior=aux){
+            aux=i
+            if(((i+anterior)%2)==0){
+                fibonacciPares+=(i+anterior)
+            }
+            console.log(i)
+        }
+
+        alert(`A soma dos números pares na sequência de fibonacci é:\n${fibonacciPares}`)
+    </script>
+
+    <h4><a href="index.html">Voltar</a></h4>
+</body>
+</html>
