@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item 11</title>
+</head>
+<body
+    <label for="">Valor de A: </label>
+    <input type="number" id="a" required > <br><br>
+    <label for="">Valor de B: </label>
+    <input type="number" id="b" required > <br><br>
+    <label for="">Valor de C: </label>
+    <input type="number" id="c" required > <br><br>
+    <button onclick="delta()">Calcular Delta</button>
+
+    <script>
+        function delta(){
+            let a=document.getElementById("a").value
+            let b=document.getElementById("b").value
+            let c=document.getElementById("c").value
+            document.writeln(`<h2>DELTA = ${b}*${b} - 4 * ${a} * ${c}</h2> <br>`)
+            document.writeln(`<h2>DELTA = ${b*b} - ${a*4*c}</h2><br>`)
+            document.writeln(`<h2>DELTA = ${(b*b) - 4 * a * c}</h2><br>`)
+        }
+    </script>
+    <h4><a href="index.html">Voltar</a></h4>
+</body>
+</html>
