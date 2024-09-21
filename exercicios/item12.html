@@ -6,9 +6,20 @@
     <title>Item 12</title>
 </head>
 <body>
+    <style>
+        *{
+            margin-left: auto;
+        }
+        input{
+            width: 25rem;
+            height: 2rem;
+        }
+    </style>
     <input type="text" id="palavra" required placeholder="escreva algo">
     
     <button onclick="inverter()">Inverter</button>
+    <br><br>
+    <div id="invertido"></div>
     <script>
         function inverter(){
             let palavra=String(document.getElementById("palavra").value)
@@ -16,7 +27,7 @@
             for(i=(palavra.length)-1; i>=0; i--){
                 palavraInvertida+=palavra.charAt(i)
             }
-            return document.write(`<h1>${palavraInvertida}</h1>`)
+            document.getElementById("invertido").innerHTML=`<h2>${palavraInvertida}</h2>`;
         }
     </script>
     <h4><a href="index.html">Voltar</a></h4>

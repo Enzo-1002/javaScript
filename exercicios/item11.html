@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item 11</title>
 </head>
-<body
+<body>
+    <h3>&Delta; = b<sup>2</sup> - 4 . a . c</h3> <br><br>
     <label for="">Valor de A: </label>
-    <input type="number" id="a" required > <br><br>
+    <input type="number" id="a" required value="1"> <br><br>
     <label for="">Valor de B: </label>
-    <input type="number" id="b" required > <br><br>
+    <input type="number" id="b" required value="1"> <br><br>
     <label for="">Valor de C: </label>
-    <input type="number" id="c" required > <br><br>
+    <input type="number" id="c" required value="1"> <br><br>
     <button onclick="delta()">Calcular Delta</button>
+    <br><br>
+    <div id="calculos"></div>
 
     <script>
         function delta(){
             let a=document.getElementById("a").value
             let b=document.getElementById("b").value
             let c=document.getElementById("c").value
-            document.writeln(`<h2>DELTA = ${b}*${b} - 4 * ${a} * ${c}</h2> <br>`)
-            document.writeln(`<h2>DELTA = ${b*b} - ${a*4*c}</h2><br>`)
-            document.writeln(`<h2>DELTA = ${(b*b) - 4 * a * c}</h2><br>`)
+            let operacao=""
+            operacao += (`<h2>&Delta; = (${b})² - 4 * (${a}) * (${c})</h2> <br>`)
+            operacao += (`<h2>&Delta; = ${b*b} - ${a*4*c}</h2><br>`)
+            operacao += (`<h2>&Delta; = ${(b*b) - 4 * a * c}</h2><br>`)
+            document.getElementById("calculos").innerHTML=operacao
         }
     </script>
     <h4><a href="index.html">Voltar</a></h4>
