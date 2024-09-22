@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Item 13</title>
 </head>
 <body>
     <style>
-        *{
-            margin-left: auto;
-        }
         input{
             width: 25rem;
             height: 2rem;
@@ -19,22 +17,29 @@
     <input type="number" id="base" required placeholder="BASE">
     <input type="number" id="expoente" required placeholder="EXPOENTE">
     
-    <button onclick="potenciacao()">Inverter</button>
+    <button onclick="potenciacao()">Calcular</button>
     <br><br>
     <div id="potenciacao"></div>
     <script>
         function potenciacao(){
             let base=document.getElementById("base").value
             let expoente=document.getElementById("expoente").value
-            let potencia=0
-            for(i=1; i<=expoente; i++){
-                base*=base
-            }
+            let potencia=1
             let text=""
-            text+=`${base}<sup>${expoente}</sup> = `
+            
+            for(i=0; i<=(Math.abs(expoente)); i++){
+                if(expoente<0){
+                    text+=`${base}<sup>${i*-1}</sup> = ${"1/"+potencia} <br>`
+                }
+                else{
+                    text+=`${base}<sup>${i}</sup> = ${potencia} <br>`
+                }
+                potencia*=base
+            }
             document.getElementById("potenciacao").innerHTML=`<h2>${text}</h2>`;
         }
     </script>
+    <br>
     <h4><a href="index.html">Voltar</a></h4>
 </body>
 </html>
