@@ -13,7 +13,8 @@
             height: 2rem;
         }
     </style>
-    <label for=""><h2>Base ^ expoente = potencia</h2></label> <br><br>
+    <label for=""><h2>Base ^ expoente = potencia</h2></label> <br>
+    <label for="">Obs: pode colocar bases e expoentes negativos</label><br><br>
     <input type="number" id="base" required placeholder="BASE">
     <input type="number" id="expoente" required placeholder="EXPOENTE">
     
@@ -29,10 +30,10 @@
             
             for(i=0; i<=(Math.abs(expoente)); i++){
                 if(expoente<0){
-                    text+=`${base}<sup>${i*-1}</sup> = ${"1/"+potencia} <br>`
+                    text+=`(${base})<sup>${i*-1}</sup> = ${"1/"+potencia} <br>`
                 }
                 else{
-                    text+=`${base}<sup>${i}</sup> = ${potencia} <br>`
+                    text+=`(${base})<sup>${i}</sup> = ${potencia} <br>`
                 }
                 potencia*=base
             }
